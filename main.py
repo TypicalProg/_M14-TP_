@@ -1,3 +1,13 @@
+# Created by Michurin Andrey
+#
+# M14ur1nAK@yandex.ru
+#
+# Copyright © 2019
+#
+# Программное обеспечение _M14-TP_
+#
+
+
 import sys
 
 def cls():
