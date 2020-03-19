@@ -2,7 +2,7 @@ from tkinter import *
 import calendar
 import datetime
 root = Tk()
-root.title('Calendar')
+root.title('Календарь')
 days = []
 now = datetime.datetime.now()
 year = now.year

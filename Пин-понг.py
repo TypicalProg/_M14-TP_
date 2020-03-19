@@ -71,7 +71,7 @@ def bounce(action):
 
 # устанавливаем окно
 root = Tk()
-root.title("PythonicWay Pong")
+root.title("Пин-понг")
  
 # область анимации
 c = Canvas(root, width=WIDTH, height=HEIGHT, background="#003300")

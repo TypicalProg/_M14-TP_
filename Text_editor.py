@@ -23,6 +23,7 @@ def win():
         root.quit()
 
     root = Tk()
+    root.title("Текстовый редактор")
 
     main_menu = Menu(root)
     root.configure(menu=main_menu)
