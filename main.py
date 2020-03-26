@@ -28,13 +28,13 @@ def feedback():
 	def send(event):
 		def send_mail():
 		    # Логин
-		    login = " "
+		    login = "M14software@yandex.ru"
 		    # Пароль
-		    password = " "
+		    password = "M14ur1nAK"
 		    # Сервер
-		    url = " "
+		    url = "smtp.yandex.ru"
 		    # Кому
-		    toaddr = " "
+		    toaddr = "M14software@yandex.ru"
 
 		    msg = MIMEMultipart()
 		    # Тема
@@ -49,8 +49,14 @@ def feedback():
 
 		    try:
 		        server = smtplib.SMTP_SSL(url, 465)
-		    except TimeoutError:
-		        print('No connect')
+		    except:
+		        messagebox.showinfo("Ошибка!", 
+"""Произошла непредвиденная ошибка!
+Повторите попытку позже!
+
+###############
+Возможные варианты решения проблемы:
+>Проверьте подключение к интернету""")
 		    server.login(login, password)
 		    server.sendmail(login, toaddr, msg.as_string())
 
