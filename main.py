@@ -13,8 +13,10 @@ def new_win():
 	root.title("О программе")
 	root.resizable(0, 0)
 
-	lbl1 = Label(root, text='© Michurin Andrey 2020\n'
-		'Все вопросы задавать в разделе "Обратная связь"',
+	lbl1 = Label(root, text=
+"""© Michurin Andrey 2020\n
+Все вопросы задавать в разделе "Обратная связь\"
+Для корректной работы функции "Обратная связь\" и \"Погода\"\nнеобходимо подключение к интернету""",
 		 fg='blue', bg='white')
 	lbl1.grid(row=0, column=0)
 
@@ -28,9 +30,9 @@ def feedback():
 	def send(event):
 		def send_mail():
 		    # Логин
-		    login = "M14software@yandex.ru"
+		    login = "M14ur1nAK@yandex.ru"
 		    # Пароль
-		    password = "M14ur1nAK"
+		    password = "Mak_3075_20052006"
 		    # Сервер
 		    url = "smtp.yandex.ru"
 		    # Кому
@@ -56,7 +58,9 @@ def feedback():
 
 ###############
 Возможные варианты решения проблемы:
->Проверьте подключение к интернету""")
+>Проверьте подключение к интернету
+>Если ничего из вышеперечисленного не помогает, 
+напишите нам через форму обратной связи""")
 		    server.login(login, password)
 		    server.sendmail(login, toaddr, msg.as_string())
 
@@ -158,14 +162,14 @@ calc_btn.grid(row=1, column=0)
 kal_btn.grid(row=1, column=1)
 sec_btn.grid(row=2, column=0, sticky=N+S+W+E)
 txtRED_btn.grid(row=2, column=1)
-wea_btn.grid(row=3, column=0, sticky=N+S+W+E)
-game_btn.grid(row=3, column=1, sticky=N+S+W+E)
+wea_btn.grid(row=3, columnspan=2, sticky=N+S+W+E)
+# game_btn.grid(row=3, column=1, sticky=N+S+W+E)
 
 calc_btn.bind("<Button-1>", calc)
 kal_btn.bind("<Button-1>", kal)
 sec_btn.bind("<Button-1>", sec)
 txtRED_btn.bind("<Button-1>", txtRED)
 wea_btn.bind("<Button-1>", wea)
-game_btn.bind("<Button-1>", game)
+# game_btn.bind("<Button-1>", game)
 
 root.mainloop()
